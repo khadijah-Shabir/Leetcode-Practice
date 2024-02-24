@@ -1,0 +1,61 @@
+class Solution {
+    public List<String> fizzBuzz(int n) {
+        List<String> ans = new ArrayList<>();
+        for(int i=1; i<=n; i++){
+            if(i%15==0){
+                ans.add("FizzBuzz");
+            }else if(i%3==0){
+                ans.add("Fizz");
+            }else if(i%5==0){
+                ans.add("Buzz");
+            } else {
+                ans.add(String.valueOf(i));
+            }
+        
+        }
+        return ans;
+    }
+}
+
+
+/*
+public List<String> fizzBuzz(int n) {
+
+public: This keyword indicates that the method is accessible from outside the class. 
+It means that other classes can use and call this method.
+List<String>: This specifies the return type of the method. It indicates that the method will return a list of strings.
+fizzBuzz: This is the name of the method. Methods in Java are identified by their names, 
+and this is the name you will use to call this method from other parts of the program.
+(int n): These are the parameters that the method takes. In this case, it takes a single parameter of type int named n.
+ This parameter represents the limit up to which we want to generate the "FizzBuzz" sequence.
+
+List<String> ans = new ArrayList<>();
+
+List<String> ans: This declares a variable named ans of type List<String>. 
+This variable will hold the list of strings that will be generated during the "FizzBuzz" computation.
+new ArrayList<>();: This creates a new instance of the ArrayList class.
+ ArrayList is a type of list in Java that dynamically resizes itself as elements are added or removed. 
+The angle brackets <> indicate that this ArrayList will hold elements of type String. 
+This newly created empty list is then assigned to the variable ans.
+*/
+
+/*
+Now let's dry run this code with n = 15:
+
+i = 1: Not divisible by 3 or 5, add "1" to the list.
+i = 2: Not divisible by 3 or 5, add "2" to the list.
+i = 3: Divisible by 3, add "Fizz" to the list.
+i = 4: Not divisible by 3 or 5, add "4" to the list.
+i = 5: Divisible by 5, add "Buzz" to the list.
+i = 6: Divisible by 3, add "Fizz" to the list.
+i = 7: Not divisible by 3 or 5, add "7" to the list.
+i = 8: Not divisible by 3 or 5, add "8" to the list.
+i = 9: Divisible by 3, add "Fizz" to the list.
+i = 10: Divisible by 5, add "Buzz" to the list.
+i = 11: Not divisible by 3 or 5, add "11" to the list.
+i = 12: Divisible by 3, add "Fizz" to the list.
+i = 13: Not divisible by 3 or 5, add "13" to the list.
+i = 14: Not divisible by 3 or 5, add "14" to the list.
+i = 15: Divisible by both 3 and 5, add "FizzBuzz" to the list.
+The resulting list would be ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"].
+*/
