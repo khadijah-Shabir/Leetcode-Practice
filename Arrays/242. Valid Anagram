@@ -1,0 +1,23 @@
+lass Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+         # return sorted(s)== sorted(t)  O(1) T.C 
+        # return Counter(s)==Counter(t) #one line code where counter is catually using hashmap to count 
+
+        if len(s) !=len(t):  #Base Condition
+            return False
+        countS, countT= {}, {} #creating two hashmaps
+
+        for i in range (len(s)):
+            countS[s[i]]= 1+ countS.get(s[i], 0) #counting the occurrenceof each element in the string S 
+                                                 #by using get function
+            countT[t[i]]= 1+ countT.get(t[i], 0) #counting the occurrenceof each element in the string T 
+
+#The variable c represents each character in the dictionary countS as it iterates through the keys.
+
+        for c in countS:
+            if countS[c] !=countT.get(c,0):
+                return False
+        return True
+#T.C (BigO(S+T))//Building two hashpmaps
+        
+        
