@@ -1,0 +1,13 @@
+lass Solution:
+    def maxVowels(self, s: str, k: int) -> int:
+        l=res=length=0  #res for max len that we have to return # length for checking each window 
+        vowels="aeiou"
+        for r in range(len(s)):
+            if s[r] in vowels:
+                length+=1
+            if r-l+1 > k:
+                if s[l] in vowels:
+                    length-=1
+                l+=1
+            res=max(res, length)
+        return res
