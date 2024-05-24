@@ -1,0 +1,8 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        x=s.split()  #convertsthe string into array
+        string=""
+        for i in x:
+            string+= i[::-1]+ " " #add space after every word
+
+        return string.rstrip() #removes spaces from right side 
