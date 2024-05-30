@@ -1,0 +1,8 @@
+class Solution:
+    def bulbSwitch(self, n: int) -> int:
+        x=math.sqrt(n)
+        return (int(x))
+
+
+   x=n**0.5 which is actually taking the square root of n 
+   return (int(x))
